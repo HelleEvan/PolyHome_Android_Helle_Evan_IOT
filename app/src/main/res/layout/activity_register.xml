@@ -32,7 +32,7 @@
             android:textStyle="bold|italic" />
 
         <EditText
-            android:id="@+id/editTextTextEmail"
+            android:id="@+id/registerMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -40,7 +40,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/registerPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,6 +51,7 @@
             android:id="@+id/buttonRegisterAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="register"
             android:text="Enregistrer" />
 
         <TextView

@@ -19,4 +19,15 @@ class RegisterActivity : AppCompatActivity() {
         finish()
     }
 
+    //enregistrer un compte quand le bouton est appuyé
+    //bouton lié avec onClick XML
+    private fun register(){
+            var profil = RegisterData(
+                findViewById<EditText>(R.id.registerMail).text.toString(),
+                findViewById<EditText>(R.id.registerPassword).text.toString()
+            )
+            //Api().post<RegisterData>("https://mypizza.lesmoulinsdudev.com/register", profil ,::registerSuccess)
+
+    }
+
 }
