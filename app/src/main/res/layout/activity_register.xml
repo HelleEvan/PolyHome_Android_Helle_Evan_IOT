@@ -7,32 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/maison"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:background="#62564E4E"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="317dp"
             android:layout_height="wrap_content"
             android:paddingBottom="30dp"
-            android:text="PolyHome"
+            android:text="Inscription"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
@@ -56,27 +48,28 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/buttonLogin"
+            android:id="@+id/buttonRegisterAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Connexion" />
+            android:text="Enregistrer" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="30dp"
-            android:text="Pas de compte ? "
+            android:text="Déjà un compte ? "
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonBackLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="registerNewAccount"
-            android:text="Créer un compte " />
+            android:onClick="login"
+            android:text="Retour à la page de connexion" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
