@@ -40,7 +40,7 @@
             android:textStyle="bold|italic" />
 
         <EditText
-            android:id="@+id/loginMail"
+            android:id="@+id/editTextTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,7 +48,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/loginPassword"
+            android:id="@+id/editTextTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
