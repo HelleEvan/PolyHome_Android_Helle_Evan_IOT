@@ -40,15 +40,15 @@
             android:textStyle="bold|italic" />
 
         <EditText
-            android:id="@+id/editTextTextEmail"
+            android:id="@+id/loginMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Adresse mail"
-            android:inputType="textEmailAddress" />
+            android:inputType="text" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -59,6 +59,7 @@
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="login"
             android:text="Connexion" />
 
         <TextView
