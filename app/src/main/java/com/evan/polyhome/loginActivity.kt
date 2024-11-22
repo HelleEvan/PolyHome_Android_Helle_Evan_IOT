@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidtp2.Api
+import com.google.gson.stream.JsonReader
+import com.google.gson.stream.JsonToken
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,16 +39,14 @@ class LoginActivity : AppCompatActivity() {
             findViewById<EditText>(R.id.loginPassword).text.toString()
         )
 
-        Api().post<LoginData, String>(
-            "https://polyhome.lesmoulinsdudev.com/api/users/auth",
-            connectId,
-            ::loginSuccess
-        )
+        Api().post<LoginData, Tokened>("https://polyhome.lesmoulinsdudev.com/api/users/auth", connectId, ::loginSuccess)
     }
 
-    private fun loginSuccess(responseCode: Int, token:String?){
+    private fun loginSuccess(responseCode: Int, token:Tokened?){
         runOnUiThread {
-            //response code n'est pas egale à 200, Erreur ICI ! 
+            val authToken : String = token?.token.toString();
+
+            //response code n'est pas egale à 200, Erreur ICI !
             if(responseCode == 200) {
 //                    Création de l'Intent explicite
 //                val intentToOrdersActivity = Intent(
@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 //                startActivity(intentToOrdersActivity);
                     AlertDialog.Builder(this)
                         .setTitle("Bravo ! !")
-                        .setMessage("Tu es bien connecté.")
+                        .setMessage("Tu es bien connecté."+authToken)
                         .setPositiveButton("OK") { dialog, _ ->
                             dialog.dismiss()
                         }

@@ -45,7 +45,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Adresse mail"
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="evanmhelle@gmail.com" />
 
         <EditText
             android:id="@+id/loginPassword"
@@ -53,7 +54,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Mot de passe"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:text="evan" />
 
         <Button
             android:id="@+id/buttonLogin"
